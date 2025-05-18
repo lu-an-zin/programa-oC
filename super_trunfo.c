@@ -3,7 +3,7 @@ int main(){
     char estado, estado2;
     char codigo[50], codigo2[50], cidade[50], cidade2[50];
     int populacao, populacao2, pontoTuristico, pontoTuristico2;
-    float area, area2, pib, pib2 ;
+    float area, area2, pib, pib2, densidadePopulacional,densidadePopulacional2,pibCapita,pibCapita2 ;
 
     //Entrada de dados da carta 1
     printf("----------------------------------------------------------------------------\n");
@@ -23,7 +23,15 @@ int main(){
     scanf("%f", &pib);
     printf("Digite o número de pontos turisticos: ");
     scanf("%d", &pontoTuristico);
-    
+
+    //calculo da densidade populacional
+
+    densidadePopulacional =(float) populacao / area;
+
+    //calculo do PIB per Capita
+
+    pibCapita =(float) pib / populacao;
+
     //Entrada de dados da carta 2
     printf("----------------------------------------------------------------------------\n");
     printf("Digite os dados para a carta 2!\n");
@@ -44,6 +52,13 @@ int main(){
     printf("Digite o número de pontos turisticos: ");
     scanf("%d", &pontoTuristico2);
 
+    //calculo da densidade populacional
+
+    densidadePopulacional2 =(float) populacao2 / area2;
+
+    //calculo do PIB per Capita
+
+    pibCapita2 =(float) pib2 / populacao2;
 
     //saida de dados da carta 1
     printf("----------------------------------\n");
@@ -55,6 +70,8 @@ int main(){
     printf("Área: %.2f km2\n", area);
     printf("PIB: %.2f bilhões de reais\n", pib);
     printf("Número de pontos Turísticos: %d\n", pontoTuristico);
+    printf("Densidade populacional: %.2f hab/km2\n", densidadePopulacional);
+    printf("PIB per Capita: %.2f reais\n", pibCapita);
     printf("----------------------------------\n");
 
         //saida de dados da carta 2
@@ -66,7 +83,9 @@ int main(){
     printf("População: %d\n", populacao2);
     printf("Área: %.2f km2\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
-    printf("Número de pontos Turísticos: %d\n", pontoTuristico2);;
+    printf("Número de pontos Turísticos: %d\n", pontoTuristico2);
+    printf("Densidade populacional: %.2f hab/km2\n", densidadePopulacional2);
+    printf("PIB per Capita: %.2f reais\n", pibCapita2);
     printf("----------------------------------\n");
 
     return 0;
