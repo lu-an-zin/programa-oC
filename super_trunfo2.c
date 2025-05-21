@@ -94,9 +94,9 @@ int main(){
     printf("----------------------------------\n");
 
     // Comparações
-    printf("*******Resultados*******")
-    printf("(1) para vitória e (0) para derrota ")
-    printf("\nResultado carta 1\n");
+    printf("*******Resultados*******");
+    printf("(1) para vitória e (0) para derrota ");
+    printf("Resultado carta 1\n");
     printf("População carta 1: (%d)\n", populacao > populacao2);
     printf("Área carta 1: (%d)\n", area > area2);
     printf("PIB carta 1: (%d)\n", pib > pib2);
@@ -104,8 +104,8 @@ int main(){
     printf("Densidade Populacional carta 1 (menor vence): (%d)\n", densidadePopulacional < densidadePopulacional2);
     printf("PIB per Capita carta 1: (%d)\n", pibCapita > pibCapita2);
     printf("Super Poder carta 1: (%d)\n", superPoder > superPoder2);
-    printf("---------------------------------")
-    printf("\nResultado carta 2\n");
+    printf("---------------------------------");
+    printf("Resultado carta 2\n");
     printf("População carta 2: (%d)\n", populacao2 > populacao);
     printf("Área carta 2: (%d)\n", area2 > area);
     printf("PIB carta 2: (%d)\n", pib2 > pib);
@@ -113,6 +113,17 @@ int main(){
     printf("Densidade Populacional carta 2 (menor vence): (%d)\n", densidadePopulacional2 < densidadePopulacional);
     printf("PIB per Capita carta 2: (%d)\n", pibCapita2 > pibCapita);
     printf("Super Poder carta 2: (%d)\n", superPoder2 > superPoder);
+
+    // comparação usando if-else
+
+    printf("--------------------------------------------------");
+
+    if(populacao > populacao2){
+        printf("A cidade %s, venceu em quesito de população\n", cidade);
+    }
+    else{
+        printf("A cidade %s, venceu em quesito de população\n", cidade2);
+    }
 
 
     return 0;
